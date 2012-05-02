@@ -1,0 +1,5 @@
+. ~/techyak-bin/dotfiles/zsh/config
+. ~/techyak-bin/dotfiles/zsh/aliases
+. ~/techyak-bin/dotfiles/zsh/env
+
+
