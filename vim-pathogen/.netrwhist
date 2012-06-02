@@ -1,5 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
-let g:netrw_dirhist_1='/home/techyak/dev/homework/2_3a_add_movies/hw2_rottenpotatoes/config'
-let g:netrw_dirhist_2='/home/techyak/dev/homework/hw3'
-let g:netrw_dirhist_3='/home/techyak/dev/homework/hw3/features'
