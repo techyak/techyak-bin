@@ -39,7 +39,7 @@ set visualbell                    " No beeping.
 
 set nobackup                      " Don't make a backup before overwriting a file.
 set nowritebackup                 " And again.
-set directory=$HOME/.vim/tmp//,.  " Keep swap files in one location
+"set directory=$HOME/.vim/tmp//,.  " Keep swap files in one location
 
 " UNCOMMENT TO USE
 set tabstop=2                    " Global tab width.
@@ -78,20 +78,22 @@ map <leader>tm :tabmove
 "let g:fuzzy_path_display='path'
 "map ' <C-W>s <C-W>j :FuzzyFinderTextMateRefreshFiles<Enter>:FuzzyFinderTextMate<Enter>
 "map " <C-W>v <C-W>l :FuzzyFinderTextMateRefreshFiles<Enter>:FuzzyFinderTextMate<Enter>
-"map <F1> :CtrlPMixed<cr>
-map ; :CtrlPMixed<cr>
+map <F1> :CtrlPMixed<cr>
+map <F2> :CtrlPBuffer<cr>
+"map ; :CtrlPBuffer<cr> 
+" :CtrlPMixed<cr>
 
 " Automatic fold settings for specific files. Uncomment to use.
-" autocmd FileType ruby setlocal foldmethod=syntax
-" autocmd FileType css  setlocal foldmethod=indent shiftwidth=2 tabstop=2
+"autocmd FileType ruby setlocal foldmethod=syntax
+"autocmd FileType css  setlocal foldmethod=indent shiftwidth=2 tabstop=2
 
 "ruby
-autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
-autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
-autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
-autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
+"autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
+"autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
+"autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
+"autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
 "improve autocomplete menu color
-highlight Pmenu ctermbg=238 gui=bold
+"highlight Pmenu ctermbg=238 gui=bold
 
 "SESSION MANAGEMENT
 "nmap SQ <ESC>:mksession! ~/.vim/sessions/Session.vim<CR>:wqa<CR>
@@ -114,3 +116,6 @@ highlight Pmenu ctermbg=238 gui=bold
 
 " add shortened call for BufferWindowSwap
 command! -bang -nargs=1 B :call BufferWindowSwap(<args>)
+
+"add a shortcut for ruby compiler
+map <leader>r :w ! ruby<cr>
